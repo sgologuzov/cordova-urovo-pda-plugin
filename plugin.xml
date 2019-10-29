@@ -37,7 +37,9 @@
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-        <source-file src="src/android/ru/kservice/ksm/cordova" target-dir="src/ru/kservice/ksm" />
+        <source-file src="src/android/BarcodeListener.java" target-dir="src/ru/kservice/ksm/cordova" />
+        <source-file src="src/android/UrovoBroadcastReceiver.java" target-dir="src/ru/kservice/ksm/cordova" />
+        <source-file src="src/android/UrovoPDAPlugin.java" target-dir="src/ru/kservice/ksm/cordova" />
         <lib-file src="lib/android/platform_sdk_v1.0.2.jar"/>
     </platform>
 </plugin>
