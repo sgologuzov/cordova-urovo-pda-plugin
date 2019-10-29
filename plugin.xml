@@ -33,10 +33,11 @@
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="UrovoPDAPlugin">
                 <param name="android-package" value="ru.kservice.ksm.cordova.UrovoPDAPlugin" />
+                <param name="onload" value="true" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-        <source-file src="src/android/ru/kservice/ksm/cordova" target-dir="java/ru/kservice/ksm" />
+        <source-file src="src/android/ru/kservice/ksm/cordova" target-dir="src/ru/kservice/ksm" />
         <lib-file src="lib/android/platform_sdk_v1.0.2.jar"/>
     </platform>
 </plugin>
