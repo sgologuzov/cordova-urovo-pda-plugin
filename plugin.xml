@@ -13,6 +13,6 @@
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/ru/kservice/ksm/cordova/UrovoPDAPlugin.java" target-dir="ru/kservice/ksm/cordova" />
         
-        <resource-file src="lib/android/platform_sdk_v1.0.2.jar" target="libs/platform_sdk_v1.0.2.jar" />
+        <resource-file src="lib/android/platform_sdk_v1.0.2.jar" target="app/libs/platform_sdk_v1.0.2.jar" />
     </platform>
 </plugin>
