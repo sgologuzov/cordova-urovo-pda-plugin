@@ -1,18 +1,42 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="ru.kservice.ksm.cordova-urovo-pda-plugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>Urovo PDA Plugin</name>
-    <js-module name="UrovoPDAPlugin" src="www/urovo.js">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-urovo-pda-plugin"
+    version="0.0.1">
+
+    <name>UrovoPDAPlugin</name>
+
+    <js-module src="www/urovo.js" name="UrovoPDAPlugin">
         <clobbers target="urovo" />
     </js-module>
+
+    <!-- android -->
     <platform name="android">
-        <config-file parent="/*" target="res/xml/config.xml">
+        <config-file target="res/xml/config.xml" parent="/*">
             <feature name="UrovoPDAPlugin">
                 <param name="android-package" value="ru.kservice.ksm.cordova.UrovoPDAPlugin" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
         <source-file src="src/android/ru/kservice/ksm/cordova/UrovoPDAPlugin.java" target-dir="ru/kservice/ksm/cordova" />
-        
-        <resource-file src="lib/android/platform_sdk_v1.0.2.jar" target="app/libs/platform_sdk_v1.0.2.jar" />
+        <lib-file src="lib/android/platform_sdk_v1.0.2.jar"/>
     </platform>
 </plugin>
