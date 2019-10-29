@@ -1,0 +1,19 @@
+{
+  "name": "cordova-urovo-pda-plugin",
+  "version": "0.0.1",
+  "description": "Cordova plugin for Urovo PDA barcode scanner",
+  "main": "www/urovo.js",
+  "scripts": {
+    "test": "format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sgologuzov/cordova-urovo-pda-plugin"
+  },
+  "author": "s.gologuzov@k-service.com.ru",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sgologuzov/cordova-urovo-pda-plugin/issues"
+  },
+  "homepage": "https://github.com/sgologuzov/cordova-urovo-pda-plugin#readme"
+}

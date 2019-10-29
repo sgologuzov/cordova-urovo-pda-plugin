@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="ru.kservice.ksm.cordova-urovo-pda-plugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Firmata</name>
+    <js-module name="UrovoPDAPlugin" src="www/urovo.js">
+        <clobbers target="urovo" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="UrovoPDAPlugin">
+                <param name="android-package" value="ru.kservice.ksm.cordova.UrovoPDAPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/ru/kservice/ksm/cordova/UrovoPDAPlugin.java" target-dir="ru/kservice/ksm/cordova" />
+        
+        <resource-file src="lib/android/platform_sdk_v1.0.2.jar" target="libs/platform_sdk_v1.0.2.jar" />
+    </platform>
+</plugin>
