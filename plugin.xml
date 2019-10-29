@@ -36,7 +36,7 @@
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-        <source-file src="src/android/ru/kservice/ksm/cordova/*.java" target-dir="ru/kservice/ksm/cordova" />
+        <source-file src="src/android/ru/kservice/ksm/cordova" target-dir="ru/kservice/ksm" />
         <lib-file src="lib/android/platform_sdk_v1.0.2.jar"/>
     </platform>
 </plugin>
