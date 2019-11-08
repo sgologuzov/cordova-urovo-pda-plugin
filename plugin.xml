@@ -20,7 +20,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="cordova-urovo-pda-plugin"
-    version="0.0.2">
+    version="0.1.1">
 
     <name>UrovoPDAPlugin</name>
 

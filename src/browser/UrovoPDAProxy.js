@@ -1,12 +1,13 @@
 var listener;
 
 function doScan(success, error, opts) {
-	return listener(opts[0]);
+	if (listener) {
+		listener(opts[0], {keepCallback: true});
+	}
 }
 
 function onBarcodeScanned(success, error, opts) {
 	listener = success;
-	return success();
 }
 
 module.exports = {
