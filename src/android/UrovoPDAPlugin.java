@@ -3,6 +3,7 @@ package ru.kservice.ksm.cordova;
 import android.content.Context;
 import android.content.IntentFilter;
 import android.device.ScanManager;
+import android.util.Log;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -29,6 +30,9 @@ public class UrovoPDAPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("onBarcodeScanned")) {
             this.onBarcodeScanned(callbackContext);
+            return true;
+        } else if (action.equals("doScan")) {
+            this.doScan(callbackContext);
             return true;
         }
         return false;
@@ -71,6 +75,18 @@ public class UrovoPDAPlugin extends CordovaPlugin {
         scanManager = new ScanManager();
         scanManager.openScanner();
         scanManager.switchOutputMode(0);
+    }
+
+    private void doScan(final CallbackContext callbackContext) {
+        try {
+            scanManager.stopDecode();
+            Thread.sleep(100);
+            scanManager.startDecode();
+            callbackContext.success();
+        } catch (Exception e) {
+            Log.e(LOG_TAG, e.getMessage());
+            callbackContext.error(e.getLocalizedMessage());
+        }
     }
 
     private void onBarcodeScanned(final CallbackContext callbackContext) {

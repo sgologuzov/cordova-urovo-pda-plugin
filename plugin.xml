@@ -20,7 +20,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="cordova-urovo-pda-plugin"
-    version="0.0.1">
+    version="0.0.2">
 
     <name>UrovoPDAPlugin</name>
 
@@ -28,7 +28,6 @@
         <clobbers target="urovo" />
     </js-module>
 
-    <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="UrovoPDAPlugin">
@@ -41,5 +40,16 @@
         <source-file src="src/android/UrovoBroadcastReceiver.java" target-dir="src/ru/kservice/ksm/cordova" />
         <source-file src="src/android/UrovoPDAPlugin.java" target-dir="src/ru/kservice/ksm/cordova" />
         <lib-file src="lib/android/platform_sdk_v1.0.2.jar"/>
+    </platform>
+
+    <platform name="browser">
+        <config-file target="config.xml" parent="/*">
+            <feature name="UrovoPDAPlugin">
+                <param name="browser-package" value="UrovoPDAPlugin" />
+            </feature>
+        </config-file>
+        <js-module src="src/browser/UrovoPDAProxy.js" name="UrovoPDAProxy">
+            <runs />
+        </js-module>
     </platform>
 </plugin>
